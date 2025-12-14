@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const dotenv = require("dotenv").config()
 const cors = require('cors')
-const connectDb = require("./config/connectionDB")
+const connectDb = require("./config/connectionDb")
 //gpt added
 // const recipeRoutes = require('./routes/recipe');
 // app.use('/recipe', recipeRoutes);
