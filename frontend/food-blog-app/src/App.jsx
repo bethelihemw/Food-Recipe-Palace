@@ -12,7 +12,7 @@ import RecipeDetail from "./pages/DetailDescription";
 
 const getAllRecipes = async()=> {
   let allRecipes = []
-  await axios.get("http://localhost:5000/recipe").then(res => {
+  await axios.get("${API_BASE_URL}/recipe").then(res => {
     allRecipes = res.data
   })
   return allRecipes
