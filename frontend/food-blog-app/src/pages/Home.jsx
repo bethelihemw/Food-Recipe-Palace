@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 import Recipeitems from '../components/Recipeitems';
 import{ useNavigate, useLocation} from 'react-router-dom'
 import Modal from '../components/Modal'
-import InputForm from '../components/inputForm';
+import InputForm from '../components/InputForm';
 import { useLoaderData } from 'react-router-dom';
 
 export default function Home(){
