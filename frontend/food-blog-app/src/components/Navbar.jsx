@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { FaHome, FaUserAlt } from "react-icons/fa"
 import {useState} from 'react';
 import Modal from './Modal';
-import InputForm  from './inputForm';
+import InputForm  from './InputForm';
 import { NavLink } from 'react-router-dom';
 
 export default function Navbar(){
