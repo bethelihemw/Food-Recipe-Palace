@@ -31,7 +31,8 @@ export default function Recipeitems(){
     const isMyRecipesPage = location.pathname === '/myRecipe';
 
     const onDelete=async(id)=>{
-        await axios.delete(`http://localhost:5000/recipe/${id}`).then((res)=>console.log(res))
+        await axios.delete(`${API_BASE_URL}
+/recipe/${id}`).then((res)=>console.log(res))
         setAllRecipes(recipes=>recipes.filter(recipe=>recipe._id !==id))
         let filterItem = favItems.filter(recipe => recipe._id !== id)
         localStorage.setItem("fav",JSON.stringify(filterItem))
@@ -80,7 +81,7 @@ export default function Recipeitems(){
                     <div key = {index} className='card' onClick={() => navigate(`/recipe/${item._id}`)}
                     style={{ cursor: "pointer" }}> 
                     
-                    <img src={`http://localhost:5000/images/${item.coverImage}`} width = "120px" height =" 100px" alt="" />
+                    <img src={`${API_BASE_URL}/images/${item.coverImage}`} width = "120px" height =" 100px" alt="" />
                     <div className='card-body'>
                         <div className='title'>{item.title}</div>
                         <div className = "icons">
