@@ -12,7 +12,7 @@ export default function RecipeDetail() {
   useEffect(() => {
     const fetchRecipe = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/recipe/${id}`);
+        const response = await axios.get(`https://food-recipe-palace-5.onrender.com/recipe/${id}`);
         setRecipe(response.data);
       } catch (error) {
         console.error("Error fetching recipe details:", error);
@@ -53,7 +53,7 @@ export default function RecipeDetail() {
       <div className="recipe-detail-content">
         <div className="recipe-image-section">
           <img 
-            src={`http://localhost:5000/images/${recipe.coverImage}`} 
+            src={`https://food-recipe-palace-5.onrender.com/images/${recipe.coverImage}`} 
             alt={recipe.title}
             className="recipe-main-image"
           />
