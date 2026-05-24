@@ -12,7 +12,7 @@ import RecipeDetail from "./pages/DetailDescription";
 
 const getAllRecipes = async()=> {
   let allRecipes = []
-  await axios.get("https://food-recipe-palace-5.onrender.com/recipe").then(res => {
+  await axios.get("http://localhost:5000/recipe").then(res => {
     allRecipes = res.data
   })
   return allRecipes
